@@ -16,7 +16,7 @@ public class Reservas {
     
     @Id
     @Column(name = "reservaid")
-    public int ReservaId;
+    public String ReservaId;
 
     /*public int Clienteid;*/
 
