@@ -32,4 +32,7 @@ public class Clientes {
 
     @Column(name = "telefono")
     private String Telefono;
+
+    @Column(name = "codigoclientefrecuente")
+    private String CodigoClienteFrecuente;
 }
