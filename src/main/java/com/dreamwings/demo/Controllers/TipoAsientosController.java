@@ -1,5 +1,5 @@
 package com.dreamwings.demo.Controllers;
 
-public class ClienteController {
-
+public class TipoAsientosController {
+    
 }
