@@ -18,9 +18,11 @@ public class Asientos {
     @Column(name = "asientoid")
     public int AsientoId;
 
-    /*public int TipoAsientoId;
+    @Column(name = "tipoasientoid")
+    public int TipoAsientoId;
 
-    public String VueloId;*/
+    @Column(name = "vueloid")
+    public String VueloId;
 
     @Column(name = "nombreasiento")
     public String NombreAsiento;

@@ -17,12 +17,15 @@ public class Vuelos {
     @Id
     @Column(name = "vueloid")
     public String VueloId;
+    
+    @Column(name = "avionid")
+    public int AvionId;
 
-    /*public int AvionId;
-
+    @Column(name = "rutaid")
     public int RutaId;
 
-    public String Reservaid;*/
+    @Column(name = "reservaid")
+    public String Reservaid;
 
     @Column(name = "fechapartida")
     public Date FechaPartida;

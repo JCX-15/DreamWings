@@ -18,7 +18,8 @@ public class Reservas {
     @Column(name = "reservaid")
     public String ReservaId;
 
-    /*public int Clienteid;*/
+    @Column(name = "clienteid")
+    public int Clienteid;
 
     @Column(name = "origen")
     public String Origen;

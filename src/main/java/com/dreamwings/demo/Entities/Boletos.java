@@ -18,12 +18,12 @@ public class Boletos {
     @Column(name = "boletoid")
     public int BoletoId;
 
-    /*@Column(name = "clienteid")
+    @Column(name = "clienteid")
     public int ClienteId;
 
     @Column(name = "asientoid")
     public int AsientoId;
-*/
+
     @Column(name = "precio")
     public double precio;
 }
