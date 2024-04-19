@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 import com.dreamwings.demo.Services.AvionesServices;
 
 @Service
-public class AvionesServicesImp implements AvionesServices{
+public class AvionesServicesImpl implements AvionesServices{
     
 }

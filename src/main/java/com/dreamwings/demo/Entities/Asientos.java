@@ -1,6 +1,5 @@
 package com.dreamwings.demo.Entities;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,19 +10,22 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Rutas")
-public class Rutas {
+@Table(name = "Asientos")
+public class Asientos {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="rutaid")
-    private int rutaId;
+    @Column(name = "asientoid")
+    public int AsientoId;
 
-    @Column(name = "origen")
-    private String Origen;
+    /*public int TipoAsientoId;
 
-    @Column(name = "destino")
-    private String Destino;
+    public String VueloId;*/
 
-    @Column(name="distancia")
-private boolean Distancia;
+    @Column(name = "nombreasiento")
+    public String NombreAsiento;
+
+    @Column(name = "disponible")
+    public char Disponible;
+
 }
