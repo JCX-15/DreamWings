@@ -9,5 +9,5 @@ public interface ClientesServices {
 
     public Clientes loginCliente(Login login);
 
-    public Clientes obtenerClienteFreecuente(String clientefrecuente);
+    public boolean obtenerClienteFreecuenteXCorreo(String correo, String clientefrecuente);
 }

@@ -1,14 +1,15 @@
 package com.dreamwings.demo.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.dreamwings.demo.Entities.Rutas;
 
 public interface RutasServices {
     
-    public Rutas obtenerRuta(int rutaId);
+    public Optional<Rutas> obtenerRuta(int rutaId);
 
-    public Rutas obtenerRutaXDestino(String destino);
+    public Rutas obtenerRutaOrigenXDestino(String origen, String destino);
 
     public List<Rutas> obtenerRutas();
 
