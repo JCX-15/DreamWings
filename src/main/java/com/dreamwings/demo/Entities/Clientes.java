@@ -20,29 +20,30 @@ public class Clientes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name= "clienteid")
-    private int ClienteId;
+    private int clienteId;
 
     @Column(name="nombre")
-    private String Nombre;
+    private String nombre;
 
     @Column(name = "apellido")
-    private String Apellido;
+    private String apellido;
 
     @Column(name = "correo")
-    private String Correo;
+    private String correo;
 
     @Column(name ="contrasenia")
-    private String Contrasenia;
+    private String contrasenia;
 
     @Column(name = "telefono")
-    private String Telefono;
+    private String telefono;
 
     @Column(name = "codigoclientefrecuente")
-    private String CodigoClienteFrecuente;
+    private String codigoClienteFrecuente;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Reservas> reservas;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Boletos> boletos;
+
 }
