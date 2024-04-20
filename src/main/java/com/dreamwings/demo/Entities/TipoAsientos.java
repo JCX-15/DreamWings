@@ -2,12 +2,16 @@ package com.dreamwings.demo.Entities;
 
 
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -27,8 +31,8 @@ public class TipoAsientos {
     @Column(name = "preciobase")
     private Double PrecioBase;
 
-    /*@OneToMany(mappedBy = "TipoAsientoId")
+    @OneToMany(mappedBy = "TipoAsientoId")
     @JsonIgnore
     private List<Asientos> Asientos;
-    */
+    
 }
