@@ -25,5 +25,5 @@ public class Boletos {
     public int AsientoId;
 
     @Column(name = "precio")
-    public double precio;
+    public double Precio;
 }
