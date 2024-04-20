@@ -21,13 +21,11 @@ public class Aviones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "avionid")
-    private int AvionId;
+    private int avionId;
 
-    @Column(name = "capacidad")
-    private int Capacidad;
+    private int capacidad;
 
-    @Column(name = "modelo")
-    private String Modelo;
+    private String modelo;
 
     @JsonIgnore
     @OneToMany(mappedBy = "avion")

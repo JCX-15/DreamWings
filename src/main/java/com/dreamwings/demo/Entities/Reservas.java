@@ -29,17 +29,14 @@ public class Reservas {
     @JoinColumn(name = "ClienteId", referencedColumnName = "ClienteId")
     private Clientes cliente;
 
-    @Column(name = "origen")
-    public String Origen;
+    public String Ooigen;
 
-    @Column(name = "destino")
-    public String Destino;
+    public String destino;
 
     @Column(name = "fechareserva")
-    public Date FechaReserva;
+    public Date fechaReserva;
 
-    @Column(name = "escalas")
-    public int Escalas;
+    public int sscalas;
 
     @JsonIgnore
     @OneToMany(mappedBy = "reserva")

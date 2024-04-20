@@ -23,14 +23,11 @@ public class Rutas {
     @Column(name="rutaid")
     private int rutaId;
 
-    @Column(name = "origen")
-    private String Origen;
+    private String origen;
 
-    @Column(name = "destino")
-    private String Destino;
+    private String destino;
 
-    @Column(name="distancia")
-    private boolean Distancia;
+    private boolean distancia;
 
     @JsonIgnore
     @OneToMany(mappedBy = "ruta")

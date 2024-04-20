@@ -19,19 +19,18 @@ public class Asientos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "asientoid")
-    private int AsientoId;
+    private int asientoId;
 
     @ManyToOne
     @JoinColumn(name = "TipoAsientoId", referencedColumnName = "TipoAsientoId")
     private TipoAsientos tipoasientoid;
 
     @Column(name = "vueloid")
-    private String VueloId;
+    private String vueloId;
 
     @Column(name = "nombreasiento")
-    private String NombreAsiento;
+    private String nombreAsiento;
 
-    @Column(name = "disponible")
-    private char Disponible;
+    private char disponible;
 
 }

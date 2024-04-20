@@ -20,7 +20,7 @@ public class Vuelos {
 
     @Id
     @Column(name = "vueloid")
-    public String VueloId;
+    public String vueloId;
     
     @ManyToOne
     @JoinColumn(name = "avionid", referencedColumnName = "avionid")
@@ -35,18 +35,18 @@ public class Vuelos {
     private Reservas reserva;
 
     @Column(name = "fechapartida")
-    public Date FechaPartida;
+    public Date fechaPartida;
 
     @Column(name = "nuemerovuelo")
-    public int NumeroVuelo;
+    public int numeroVuelo;
 
     @Column(name = "horallegada")
-    public Time HoraLlegada;
+    public Time horaLlegada;
 
     @Column(name = "horapartida")
-    public Time HoraPartida;
+    public Time horaPartida;
 
     @Column(name = "puertaabordaje")
-    public int PuertaAbordaje;
+    public int puertaAbordaje;
 
 }

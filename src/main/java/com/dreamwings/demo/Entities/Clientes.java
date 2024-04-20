@@ -22,19 +22,14 @@ public class Clientes {
     @Column(name= "clienteid")
     private int clienteId;
 
-    @Column(name="nombre")
     private String nombre;
 
-    @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "correo")
     private String correo;
 
-    @Column(name ="contrasenia")
     private String contrasenia;
 
-    @Column(name = "telefono")
     private String telefono;
 
     @Column(name = "codigoclientefrecuente")

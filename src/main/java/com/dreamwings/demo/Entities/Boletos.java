@@ -18,15 +18,14 @@ public class Boletos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "boletoid")
-    public int BoletoId;
+    public int boletoId;
 
     @ManyToOne
     @JoinColumn(name = "ClienteId", referencedColumnName = "ClienteId")
     private Clientes cliente; 
 
     @Column(name = "asientoid")
-    public int AsientoId;
+    public int asientoId;
 
-    @Column(name = "precio")
-    public double Precio;
+    public double precio;
 }

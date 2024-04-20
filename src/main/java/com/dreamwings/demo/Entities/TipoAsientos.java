@@ -24,11 +24,10 @@ public class TipoAsientos {
     @Column(name = "tipoasientoid")
     private int TipoAsientoId;
 
-    @Column(name = "descripcion")
-    private String Descripcion;
+    private String descripcion;
 
     @Column(name = "preciobase")
-    private double PrecioBase;
+    private double precioBase;
 
     @JsonIgnore
     @OneToMany(mappedBy = "tipoasientoid", cascade = CascadeType.ALL)
