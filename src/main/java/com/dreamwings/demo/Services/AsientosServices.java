@@ -14,5 +14,4 @@ public interface AsientosServices {
 
     public boolean estadoAsiento(String nombreAsiento, String VueloId);
 
-    public Asientos seleccionarAsientoNombre(String nombreAsiento, String VueloId);
 }
