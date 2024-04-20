@@ -27,7 +27,7 @@ public class Reservas {
 
     @ManyToOne
     @JoinColumn(name = "ClienteId", referencedColumnName = "ClienteId")
-    private Clientes ClienteId;
+    private Clientes cliente;
 
     @Column(name = "origen")
     public String Origen;

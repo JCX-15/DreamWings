@@ -30,8 +30,8 @@ public class TipoAsientos {
     @Column(name = "preciobase")
     private double PrecioBase;
 
-    @OneToMany(mappedBy = "TipoAsientosId", cascade = CascadeType.ALL)
     @JsonIgnore
+    @OneToMany(mappedBy = "tipoasientoid", cascade = CascadeType.ALL)
     private List<Asientos> asientos;
 
 

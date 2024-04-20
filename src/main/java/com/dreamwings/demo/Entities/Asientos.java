@@ -23,7 +23,7 @@ public class Asientos {
 
     @ManyToOne
     @JoinColumn(name = "TipoAsientoId", referencedColumnName = "TipoAsientoId")
-    private TipoAsientos TipoAsientosId;
+    private TipoAsientos tipoasientoid;
 
     @Column(name = "vueloid")
     private String VueloId;

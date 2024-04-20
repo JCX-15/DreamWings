@@ -40,6 +40,9 @@ public class Clientes {
     @Column(name = "codigoclientefrecuente")
     private String CodigoClienteFrecuente;
 
-    @OneToMany(mappedBy = "ClienteId", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Reservas> reservas;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Boletos> boletos;
 }
