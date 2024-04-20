@@ -6,12 +6,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Asientos")
+@Table(name = "asientos")
 public class Asientos {
     
     @Id
@@ -19,8 +21,9 @@ public class Asientos {
     @Column(name = "asientoid")
     private int AsientoId;
 
-    @Column(name = "tipoasientoid")
-    private int TipoAsientoId;
+    @ManyToOne
+    @JoinColumn(name = "TipoAsientoId", referencedColumnName = "TipoAsientoId")
+    private TipoAsientos TipoAsientosId;
 
     @Column(name = "vueloid")
     private String VueloId;

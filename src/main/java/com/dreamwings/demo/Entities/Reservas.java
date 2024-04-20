@@ -2,24 +2,32 @@ package com.dreamwings.demo.Entities;
 
 import java.sql.Date;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 
 @Entity
 @Data
-@Table(name = "Reservas")
+@Table(name = "reservas")
 public class Reservas {
     
     @Id
     @Column(name = "reservaid")
     public String ReservaId;
 
-    @Column(name = "clienteid")
-    public int Clienteid;
+    @ManyToOne
+    @JoinColumn(name = "ClienteId", referencedColumnName = "ClienteId")
+    private Clientes ClienteId;
 
     @Column(name = "origen")
     public String Origen;
@@ -32,4 +40,8 @@ public class Reservas {
 
     @Column(name = "escalas")
     public int Escalas;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "reserva")
+    private List<Vuelos> vuelos;
 }

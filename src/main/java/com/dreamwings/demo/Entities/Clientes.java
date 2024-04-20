@@ -1,16 +1,20 @@
 package com.dreamwings.demo.Entities;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Clientes")
+@Table(name = "clientes")
 public class Clientes {
     
     @Id
@@ -35,4 +39,7 @@ public class Clientes {
 
     @Column(name = "codigoclientefrecuente")
     private String CodigoClienteFrecuente;
+
+    @OneToMany(mappedBy = "ClienteId", cascade = CascadeType.ALL)
+    private List<Reservas> reservas;
 }
