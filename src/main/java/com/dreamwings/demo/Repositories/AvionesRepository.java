@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.dreamwings.demo.Entities.Aviones;
 
 @Repository
-public interface AvionesRepository extends CrudRepository<Aviones, Integer>{
-    
+public interface AvionesRepository extends CrudRepository<Aviones, String>{
+
 }

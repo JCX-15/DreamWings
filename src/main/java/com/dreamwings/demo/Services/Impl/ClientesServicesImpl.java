@@ -21,4 +21,10 @@ public class ClientesServicesImpl implements ClientesServices{
         throw new UnsupportedOperationException("Unimplemented method 'loginCliente'");
     }
 
+    @Override
+    public Clientes obtenerClienteFreecuente(String clientefrecuente) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'obtenerClienteFreecuente'");
+    }
+
 }
