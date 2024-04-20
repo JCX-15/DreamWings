@@ -8,9 +8,11 @@ public interface AsientosServices {
     
     public List<Asientos> asientosDeVuelo(String id);
 
-    public Asientos seleccionarAsiento(String nombreAsiento, String idVuelo);
+    public Asientos seleccionarAsiento(String nombreAsiento, String VueloId);
 
-    public Asientos deseleccionarAsiento(String nombreAsiento, String idVuelo); 
+    public Asientos deseleccionarAsiento(String nombreAsiento, String VueloId); 
 
-    public boolean estadoAsiento(String nombreAsiento, String idVuelo);
+    public boolean estadoAsiento(String nombreAsiento, String VueloId);
+
+    public Asientos seleccionarAsientoNombre(String nombreAsiento, String VueloId);
 }
