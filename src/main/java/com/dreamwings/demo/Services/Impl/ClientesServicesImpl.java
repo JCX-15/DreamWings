@@ -1,5 +1,7 @@
 package com.dreamwings.demo.Services.Impl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,32 +18,35 @@ public class ClientesServicesImpl implements ClientesServices{
 
     @Override
     public Clientes guardarCliente(Clientes cliente) {
-        if (existsByCorreo(cliente.getCorreo())) {
+        if (clientesRepository.existsByCorreo(cliente.getCorreo())) {
             throw new IllegalArgumentException("Ya existe un cliente con este correo");
         }
-        clientesRepository.save(cliente);
+        Clientes nvoCliente = new Clientes();
+        nvoCliente.setNombre(cliente.getNombre());
+        nvoCliente.setApellido(cliente.getApellido());
+        nvoCliente.setCorreo(cliente.getCorreo());
+        nvoCliente.setContrasenia(cliente.getContrasenia());
+        nvoCliente.setTelefono(cliente.getTelefono());
+        nvoCliente.setCodigoClienteFrecuente(cliente.getCodigoClienteFrecuente());
+        clientesRepository.save(nvoCliente);
         
-        return cliente; 
-    }
-
-    public boolean existsByCorreo(String correo) {
-        return clientesRepository.existsByCorreo(correo);
+        return nvoCliente; 
     }
 
     @Override
     public Clientes loginCliente(Login login) {
-        Clientes clienteEncontrado = clientesRepository.findByCorreoAndContrasenia(login.getCorreo(), login.getContrasenia());
-        if (clienteEncontrado != null) {
-            return clienteEncontrado;
-        } 
-        return null;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'loginCliente'");
     }
-
+    
     @Override
     public boolean obtenerClienteFreecuenteXCorreo(String correo ,String codigoclientefrecuente) {
-        if (clientesRepository.findByCorreoAndCodigoClienteFrecuente(correo, codigoclientefrecuente)){
-            return clientesRepository.findByCorreoAndCodigoClienteFrecuente(correo, codigoclientefrecuente);
+        if (clientesRepository.existsByCorreoAndCodigoClienteFrecuente(correo, codigoclientefrecuente)){
+            return clientesRepository.existsByCorreoAndCodigoClienteFrecuente(correo, codigoclientefrecuente);
         }
         return false;
     }
+
+
+    
 }
