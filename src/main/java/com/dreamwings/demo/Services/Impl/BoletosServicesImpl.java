@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dreamwings.demo.DTO.BoletoJson;
+import com.dreamwings.demo.DTO.BoletoSinCliente;
 import com.dreamwings.demo.Entities.Boletos;
 import com.dreamwings.demo.Entities.Clientes;
 import com.dreamwings.demo.Repositories.BoletosRepository;
@@ -35,6 +36,12 @@ public class BoletosServicesImpl implements BoletosServices{
         Optional<Clientes> cliente = this.clientesRepository.findById(id);
         List<Boletos> boletos = this.boletosRepository.findByCliente(cliente);
         return boletos;
+    }
+
+    @Override
+    public String crearBoletoSinCliente(BoletoSinCliente boleto) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'crearBoletoSinCliente'");
     }
     
     
