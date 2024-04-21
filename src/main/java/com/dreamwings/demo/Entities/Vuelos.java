@@ -3,13 +3,17 @@ package com.dreamwings.demo.Entities;
 import java.sql.Date;
 import java.sql.Time;
 
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -35,18 +39,22 @@ public class Vuelos {
     private Reservas reserva;
 
     @Column(name = "fechapartida")
-    public Date fechaPartida;
+    private Date fechaPartida;
 
     @Column(name = "nuemerovuelo")
-    public int numeroVuelo;
+    private int numeroVuelo;
 
     @Column(name = "horallegada")
-    public Time horaLlegada;
+    private Time horaLlegada;
 
     @Column(name = "horapartida")
-    public Time horaPartida;
+    private Time horaPartida;
 
     @Column(name = "puertaabordaje")
-    public int puertaAbordaje;
+    private int puertaAbordaje;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "vueloId", cascade = CascadeType.ALL)
+    private List<Asientos> asientos;
 
 }

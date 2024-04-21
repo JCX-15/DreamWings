@@ -6,10 +6,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.dreamwings.demo.Entities.Asientos;
+import com.dreamwings.demo.Entities.Vuelos;
 
 @Repository
 public interface AsientosRepository extends CrudRepository<Asientos, Integer>{
-    List<Asientos> findByVueloId(String vueloId);
+    List<Asientos> findByVueloId(Vuelos vueloId);
 
-    Asientos findByNombreAsientoAndVueloId(String nombreAsiento, String vueloId);
+
 }

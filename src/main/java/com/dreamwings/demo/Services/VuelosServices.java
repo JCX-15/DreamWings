@@ -1,12 +1,13 @@
 package com.dreamwings.demo.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.dreamwings.demo.Entities.Vuelos;
 
 public interface VuelosServices {
     
-    public Vuelos obtenerVuelo(String vueloId);
+    public Optional<Vuelos> obtenerVuelo(String vueloId);
 
     public List<Vuelos> obtenerVuelos();
 
