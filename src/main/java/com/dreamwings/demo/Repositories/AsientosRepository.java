@@ -13,7 +13,7 @@ import com.dreamwings.demo.Entities.Vuelos;
 public interface AsientosRepository extends CrudRepository<Asientos, Integer>{
     List<Asientos> findByVueloId(Vuelos vueloId);
 
-    Asientos findByNombreAsientoAndVueloId(String nombreAsiento, Vuelos vuelo);
+    Asientos findByNombreAsientoAndVueloId(String nombreAsiento, Vuelos vueloId);
 
 
 

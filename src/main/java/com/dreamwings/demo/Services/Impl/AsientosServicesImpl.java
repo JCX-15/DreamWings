@@ -22,85 +22,23 @@ public class AsientosServicesImpl implements AsientosServices{
     @Autowired
     private VuelosRepository vuelosRepository;
 
-    @Override
-public Asientos seleccionarAsiento(String nombreAsiento, String vuelo) {
-    Optional<Vuelos> vueloOptional = this.vuelosRepository.findById(vuelo);
-
-    if (vueloOptional.isEmpty()) {
-        return null;
-    }
-
-    Vuelos vuelos = vueloOptional.get();
-
-    Asientos asientoOptional = this.asientosRepository.findByNombreAsientoAndVueloId(nombreAsiento, vuelos);
-
-    if (asientoOptional == null) {
-        return null;
-    }
-
-    if (asientoOptional.getDisponible() == '1') {
-        asientoOptional.setDisponible('0');
-        asientosRepository.save(asientoOptional);
-        return asientoOptional;
-    } else {
-        return null;
-    }
-}
-
-
-    /*@Override
-    public Asientos seleccionarAsiento(String nombreAsiento, String vueloId) {
-        
-        List<Asientos> asientos = (List<Asientos>) this.asientosRepository.findAll();
-        Optional<Vuelos> vuelo = this.vuelosRepository.findById(vueloId);
-
-        for(Asientos nvoAsiento:asientos ){
-            if (nvoAsiento.getNombreAsiento().equals(nombreAsiento) && nvoAsiento.getVueloId().equals(vuelo.get())){
-                if (nvoAsiento.getDisponible()=='1'){
-                    nvoAsiento.setDisponible('0');
-                    asientosRepository.save(nvoAsiento);
-                    return nvoAsiento;
-                }
-            }       
-        }
-    
-        return null;
-    }*/
-
-    
 
     @Override
-    public Asientos deseleccionarAsiento(String nombreAsiento, String vueloId) {
-        List<Asientos> asientos = (List<Asientos>) this.asientosRepository.findAll();
-        Optional<Vuelos> vuelo = this.vuelosRepository.findById(vueloId);
-
-        for(Asientos nvoAsiento:asientos ){
-            if (nvoAsiento.getNombreAsiento().equals(nombreAsiento) && nvoAsiento.getVueloId().equals(vuelo)){
-                if (nvoAsiento.getDisponible()=='0'){
-                    nvoAsiento.setDisponible('1');
-                    asientosRepository.save(nvoAsiento);
-                    return nvoAsiento;
-                }
-            }       
-        }
-    
-        return null;
+    public Asientos seleccionarAsiento(String nombreAsiento, String vuelo) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'seleccionarAsiento'");
     }
 
-
+    @Override
+    public Asientos deseleccionarAsiento(String nombreAsiento, String VueloId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deseleccionarAsiento'");
+    }
 
     @Override
-    public boolean estadoAsiento(String nombreAsiento, String vueloId) {
-        List<Asientos> asientos = (List<Asientos>) this.asientosRepository.findAll();
-
-        for(Asientos nvoAsiento:asientos ){
-            if (nvoAsiento.getNombreAsiento().equals(nombreAsiento) && nvoAsiento.getVueloId().equals(vueloId)){
-                if (nvoAsiento.getDisponible()=='1'){
-                    return true;
-                }
-            }       
-        }
-        return false;
+    public boolean estadoAsiento(String nombreAsiento, String VueloId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'estadoAsiento'");
     }
 
 }

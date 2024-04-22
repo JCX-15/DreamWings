@@ -23,7 +23,7 @@ public class VuelosServicesImpl implements VuelosServices{
     private RutasRepository rutasRepository;
 
     @Override
-    public Optional<Vuelos> obtenerVuelo(String vueloId) {
+    public Optional<Vuelos> obtenerVuelo(int vueloId) {
         return this.vuelosRepository.findById(vueloId);
     }
 

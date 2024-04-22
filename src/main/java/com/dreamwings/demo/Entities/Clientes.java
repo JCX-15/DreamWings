@@ -35,7 +35,7 @@ public class Clientes {
     @Column(name = "codigoclientefrecuente")
     private String codigoClienteFrecuente;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "clienteid", cascade = CascadeType.ALL)
     private List<Reservas> reservas;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)

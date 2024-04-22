@@ -24,10 +24,8 @@ public class AsientosController {
         return this.asientosservicesimpl.seleccionarAsiento(nombreAsiento, vueloId);
     }
 
-    @GetMapping("/Estado/{nombreAsiento}/{vueloId}")
-    public boolean estadoAsiento(
-            @PathVariable(name = "nombreAsiento") String nombreAsiento,
-            @PathVariable(name = "vueloId") String vueloId) {
-        return  asientosservicesimpl.estadoAsiento(nombreAsiento, vueloId);
+    @GetMapping("/estado-asiento/{nombreAsiento}/{vueloId}")
+    public boolean estadoAsiento(@PathVariable String nombreAsiento, @PathVariable String vueloId) {
+        return asientosservicesimpl.estadoAsiento(nombreAsiento, vueloId);
     }
 }

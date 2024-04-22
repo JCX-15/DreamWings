@@ -23,20 +23,20 @@ public class Reservas {
     
     @Id
     @Column(name = "reservaid")
-    public String ReservaId;
+    private String ReservaId;
 
     @ManyToOne
-    @JoinColumn(name = "ClienteId", referencedColumnName = "ClienteId")
-    private Clientes cliente;
+    @JoinColumn(name = "clienteid", referencedColumnName = "clienteid")
+    private Clientes clienteid;
 
-    public String Ooigen;
+    public String origen;
 
     public String destino;
 
     @Column(name = "fechareserva")
     public Date fechaReserva;
 
-    public int sscalas;
+    public int escalas;
 
     @JsonIgnore
     @OneToMany(mappedBy = "reserva")
