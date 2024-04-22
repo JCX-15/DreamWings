@@ -32,6 +32,6 @@ public class Asientos {
     @Column(name = "nombreasiento")
     private String nombreAsiento;
 
-    private char disponible;
+    private boolean disponible;
 
 }

@@ -7,7 +7,7 @@ import com.dreamwings.demo.Entities.Vuelos;
 
 public interface VuelosServices {
     
-    public Optional<Vuelos> obtenerVuelo(String vueloId);
+    public Optional<Vuelos> obtenerVuelo(int vueloId);
 
     public List<Vuelos> obtenerVuelos();
 
