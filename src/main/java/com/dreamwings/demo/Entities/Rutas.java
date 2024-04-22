@@ -27,7 +27,7 @@ public class Rutas {
 
     private String destino;
 
-    private boolean distancia;
+    private int distancia;
 
     @JsonIgnore
     @OneToMany(mappedBy = "ruta")

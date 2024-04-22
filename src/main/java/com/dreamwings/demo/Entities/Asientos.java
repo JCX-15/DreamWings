@@ -26,7 +26,7 @@ public class Asientos {
     private TipoAsientos tipoasientoid;
 
     @ManyToOne
-    @JoinColumn(name = "VueloId", referencedColumnName = "VueloId")
+    @JoinColumn(name = "vueloId", referencedColumnName = "vueloId")
     private Vuelos vueloId;
 
     @Column(name = "nombreasiento")
