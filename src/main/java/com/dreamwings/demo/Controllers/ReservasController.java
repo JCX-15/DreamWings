@@ -12,8 +12,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/reserva")
 public class ReservasController {
     
-    @Autowired
-    private ReservasServicesImpl reservasservicesimpl;
-
-    
 }
